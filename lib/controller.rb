@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
   post '/gossip/:id/edit' do
     @id = params[:id].to_i
     Gossip.edit(@id,params[:gossip_edit])
-    redirect '/gossip/:id'
+    redirect "/gossip/#{@id}"
   end
 
 end
