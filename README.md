@@ -4,9 +4,6 @@
 <img src="https://img.shields.io/badge/language-RUBY-red"> <br>
 <br>
 
-<img style="float:left" src="https://raw.githubusercontent.com/antcrn/test/master/Capture%20d%E2%80%99%C3%A9cran%20du%202021-07-22%2022-05-34.png" />
-<br>
-<br>
 
 <pre>
 git clone git@github.com:Wiyap/THP_exo_S4_J4.git
