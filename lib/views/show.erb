@@ -3,23 +3,24 @@
     <title>Page Potins</title>
   </head>
   <body>
+
     <h3>Voici la page du potin n°<%= @id+1 %></h3>
       <p>
         Son auteur : <%= @gossip.author %><br/>
         Son contenu : <%= @gossip.content %>
       </p>
-    <form action='/gossip/<%= @id %>' method='POST'>
-      Nouveau commentaire :  <input type='text' name='new_comment'/>
-      <input type='submit'/>
-    </form>
 
     <h3>Commentaires:</h3>
-    
       <% @comments.each do |comment|%>
         <p>
           -<%= comment[1] %><br/>
         </p>
       <% end %>
+      
+    <form action='/gossip/<%= @id %>' method='POST'>
+      Nouveau commentaire :  <input type='text' name='new_comment'/>
+      <input type='submit'/>
+    </form>
 
     <a href="/gossip/<%= @id %>/edit">Editer le potins<a><br/>
     <a href="/">Revenir à la page d'acceuil<a><br/>

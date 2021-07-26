@@ -25,7 +25,7 @@ class ApplicationController < Sinatra::Base
   post '/gossip/:id' do
     @id = params[:id].to_i
     Gossip.comment(@id+1,params[:new_comment])
-    redirect '/gossip/:id'
+    redirect "/gossip/#{@id}"
   end
 
   get '/gossip/:id/edit' do
