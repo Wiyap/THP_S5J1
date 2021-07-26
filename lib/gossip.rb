@@ -47,4 +47,21 @@ class Gossip
     end
   end
 
+  def self.comment(gossip_id,new_comment)
+    CSV.open("./db/comment.csv", "ab") do |csv|
+      csv << [gossip_id,new_comment]
+    end
+  end
+
+  def self.show_comment(gossip_id)
+    comment_array= []
+    CSV.read("./db/comment.csv").each do |csv|
+      if csv[0].to_i == gossip_id
+        
+        comment_array << csv
+      end
+    end
+    return comment_array
+  end
 end
+
