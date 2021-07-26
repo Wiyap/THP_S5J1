@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Page Potins</title>
+  </head>
+  <body>
+    <h3>Voici la page du potin n°<%= @id+1 %></h3>
+      <p>
+        Son auteur : <%= @gossip[1].author %><br/>
+        Son contenu : <%= @gossip[1].content %>
+      </p>
+      <a href="/gossip/<%= @id %>/edit">Editer le potins<a><br/>
+    <a href="/">Revenir à la page d'acceuil<a><br/>
+  </body>
+</html>

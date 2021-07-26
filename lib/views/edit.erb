@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>Editer le potin n°#{id+1}</title>
+  </head>
+  <body>
+  <h1>Menu d'édition!</h1>
+    <form action='/gossip/<%= @id %>/edit' method='POST'>
+      Modifie le potin ici:  <input type='text' name='gossip_edit'/>
+      <input type='submit'/>
+    </form>
+  </body>
+</html>
